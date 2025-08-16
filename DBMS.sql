@@ -384,6 +384,26 @@ SQL> SELECT *
 
 49 rows selected.
 
+SQL> SELECT *
+  2  FROM SHIPT FULL OUTER JOIN PORT
+  3  ON SHIPT.PR_ID=PORT.PR_ID;
+
+        ID NAME                      PR_ID DISCHARGE_PORT      PR_ID PNAME                     LOC                   LATITUDE             LONGITUDE
+---------- -------------------- ---------- -------------- ---------- ------------------------- -----
+         1 ULCV                          3              6          3 JEBEL ALI                 DUBAI
+         5 OLDDENDORFF                   6              3          6 CHENNAI                   INDIA                 13.0844 N            80.2899
+         2 BLACK PERL
+         4  DIAMOND                      6              4          6 CHENNAI                   INDIA                 13.0844 N            80.2899
+         7 SYMPHONY OF SEAS              4              6          4 ANTWERPEN                 BELGIUM               51.3025 N            4.3115 E
+         6 GOLD WAY
+         5 BLACK ROSE                    5              3          5 PORT OF COLOMBO           SHRILANKA
+                                                                   1 SHANGHAI                  CHINA                 31.2167 N            121.5000 E
+                                                                   2 SINGAPORE                 SINGAPORE             1.2593 N             103.7544 E
+                                                                   7 AMERICAN PORT             CALIFORINA            33.7329 N            118.2630 W
+
+10 rows selected.
+
+SQL> 
 
 
 SQL> SPOOL OFF;
